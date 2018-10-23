@@ -26,6 +26,6 @@
                 <AutoSuggestBox QueryIcon="Find"/>
             </NavigationView.AutoSuggestBox>
         </NavigationView>
-        <Frame Content="Frame" HorizontalAlignment="Stretch" VerticalAlignment="Top" RenderTransformOrigin="15.024,15.1" Height="612" Margin="322,98,10,0"/>
+        <Frame Content="Cambios en el frame" HorizontalAlignment="Stretch" VerticalAlignment="Top" RenderTransformOrigin="15.024,15.1" Height="612" Margin="322,98,10,0"/>
     </Grid>
 </Page>
