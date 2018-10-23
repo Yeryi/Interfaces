@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="Proyecto.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Proyecto"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <NavigationView>
+            <NavigationView.Header>
+                <NavigationViewItem Content="Menu" Margin="0,48,0,0"/>
+            </NavigationView.Header>
+
+            <NavigationView.MenuItems>
+                <NavigationViewItemHeader Content="Acciones">
+                </NavigationViewItemHeader>
+                <NavigationViewItem Content="Lista" Icon="List"/>
+                <NavigationViewItem Content="Añadir" Icon="Add"/>
+                <NavigationViewItem Content="Eliminar" Icon="Delete"/>
+            </NavigationView.MenuItems>
+
+            <NavigationView.AutoSuggestBox>
+                <AutoSuggestBox QueryIcon="Find"/>
+            </NavigationView.AutoSuggestBox>
+        </NavigationView>
+        <Frame Content="Frame" HorizontalAlignment="Stretch" VerticalAlignment="Top" RenderTransformOrigin="15.024,15.1" Height="612" Margin="322,98,10,0"/>
+    </Grid>
+</Page>
