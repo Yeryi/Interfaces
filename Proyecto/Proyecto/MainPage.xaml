@@ -8,24 +8,26 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <NavigationView>
-            <NavigationView.Header>
-                <NavigationViewItem Content="Menu" Margin="0,48,0,0"/>
-            </NavigationView.Header>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
-            <NavigationView.MenuItems>
-                <NavigationViewItemHeader Content="Acciones">
-                </NavigationViewItemHeader>
-                <NavigationViewItem Content="Lista" Icon="List"/>
-                <NavigationViewItem Content="Añadir" Icon="Add"/>
-                <NavigationViewItem Content="Eliminar" Icon="Delete"/>
-            </NavigationView.MenuItems>
+        <RelativePanel>
+            <Button Name="Boton_menu" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" FontSize="20" VerticalAlignment="Top" Click="boton_menu_click" Background="White"/>
+        </RelativePanel>
 
-            <NavigationView.AutoSuggestBox>
-                <AutoSuggestBox QueryIcon="Find"/>
-            </NavigationView.AutoSuggestBox>
-        </NavigationView>
-        <Frame Content="Cambios en el frame" HorizontalAlignment="Stretch" VerticalAlignment="Top" RenderTransformOrigin="15.024,15.1" Height="612" Margin="322,98,10,0"/>
+        <SplitView Grid.Row="1" Name="MiSplitView" IsPaneOpen="True" DisplayMode="Inline" OpenPaneLength="296">
+            <SplitView.Pane>
+                <StackPanel>
+                    <Button Content="Lista" Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}" Margin="0,20,0,0"/>
+                    <Button Content="Añadir" Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}" Margin="0,20,0,0"/>
+                    <Button Content="Eliminar" Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}" Margin="0,20,0,0"/>
+                </StackPanel>
+            </SplitView.Pane>
+            <!--<Frame Content="Frame" RenderTransformOrigin="15.024,15.1" Margin="0,0,0,0"/>-->
+        </SplitView>
     </Grid>
 </Page>
+
