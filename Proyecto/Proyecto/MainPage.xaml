@@ -18,15 +18,33 @@
             <Button Name="Boton_menu" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" FontSize="20" VerticalAlignment="Top" Click="boton_menu_click" Background="White"/>
         </RelativePanel>
 
-        <SplitView Grid.Row="1" Name="MiSplitView" IsPaneOpen="True" DisplayMode="Inline" OpenPaneLength="296">
+        <SplitView Grid.Row="1" Name="MiSplitView" IsPaneOpen="False" DisplayMode="CompactOverlay" OpenPaneLength="296" CompactPaneLength="40">
             <SplitView.Pane>
                 <StackPanel>
-                    <Button Content="Lista" Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}" Margin="0,20,0,0"/>
-                    <Button Content="Añadir" Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}" Margin="0,20,0,0"/>
-                    <Button Content="Eliminar" Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}" Margin="0,20,0,0"/>
+                    <Button Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}" Margin="0,20,0,0" Width="296" HorizontalContentAlignment="Left" Click="Boton_lista_click">
+                        <StackPanel Orientation="Horizontal">
+                            <SymbolIcon Symbol="List" Margin="0,0,10,0"/>
+                            <TextBlock Text="Lista"/>
+                        </StackPanel>
+                    </Button>
+                    <Button Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}" Margin="0,20,0,0" Width="296" HorizontalContentAlignment="Left" Click="Boton_añadir_click">
+                        <StackPanel Orientation="Horizontal">
+                            <SymbolIcon Symbol="Add" Margin="0,0,10,0"/>
+                            <TextBlock Text="Añadir"/>
+                        </StackPanel>
+                    </Button>
+                    <Button Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}" Margin="0,20,0,0" Width="296" HorizontalContentAlignment="Left" Click="Boton_eliminar_click">
+                        <StackPanel Orientation="Horizontal">
+                            <SymbolIcon Symbol="Delete" Margin="0,0,10,0"/>
+                            <TextBlock Text="Eliminar"/>
+                        </StackPanel>
+                    </Button>
                 </StackPanel>
             </SplitView.Pane>
-            <!--<Frame Content="Frame" RenderTransformOrigin="15.024,15.1" Margin="0,0,0,0"/>-->
+            
+            <Frame x:Name="frame" Content="hola" Margin="0,0,0,0">
+               
+            </Frame>
         </SplitView>
     </Grid>
 </Page>

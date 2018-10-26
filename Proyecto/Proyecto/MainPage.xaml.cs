@@ -26,5 +26,25 @@ namespace Proyecto
         {
             this.InitializeComponent();
         }
+
+        public void boton_menu_click(object sender, RoutedEventArgs e)
+        {
+            MiSplitView.IsPaneOpen = !MiSplitView.IsPaneOpen;
+        }
+
+        public void Boton_lista_click(object sender,RoutedEventArgs e)
+        {
+            frame.Navigate(typeof(Lista));
+        }
+
+        public void Boton_añadir_click(object sender, RoutedEventArgs e)
+        {
+            frame.Navigate(typeof(Añadir));
+        }
+
+        public void Boton_eliminar_click(object sender, RoutedEventArgs e)
+        {
+            frame.Navigate(typeof(Eliminar));
+        }
     }
 }
