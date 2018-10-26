@@ -12,7 +12,6 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
@@ -20,33 +19,35 @@
             <RowDefinition Height="80px"/>
             <RowDefinition Height="80px"/>
             <RowDefinition Height="80px"/>
-            <RowDefinition Height="80px"/>
-            <RowDefinition Height="80px"/>
-            <RowDefinition Height="80px"/>
+            <RowDefinition Height="140px"/>
             <RowDefinition Height="80px"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Insertar Vehiculos" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" FontSize="24" FontWeight="Bold" Margin="20,0,0,0"/>
-        <TextBox Grid.Column="0" Grid.Row="1" Margin="20,15,0,0" Header="Customer Name"></TextBox>
-        <TextBox Grid.Column="0" Grid.Row="2" Header="Phone" Margin="20,15,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left"/>
-        <TextBox Grid.Column="0" Grid.Row="3" Header="Address" Margin="20,15,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left"/>
-        <TextBox Grid.Column="0" Grid.Row="4" Margin="20,15,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left" PlaceholderText="Address 1"/>
-        <TextBox Grid.Column="0" Grid.Row="5" Margin="20,15,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left" PlaceholderText="Address 2"/>
-        <TextBox Grid.Column="0" Grid.Row="6" Margin="20,15,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left" PlaceholderText="City"/>
-        <StackPanel Grid.Column="0" Grid.Row="7" Orientation="Horizontal">
-            <TextBox Margin="20,15,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left" PlaceholderText="ZIP"/>
-            <ComboBox PlaceholderText="WA" Margin="20,15,0,0">
-                <x:String>1</x:String>
-                <x:String>2</x:String>
-                <x:String>3</x:String>
-                <x:String>4</x:String>
+        <TextBlock Text="Insertar Vehiculos" Grid.Column="0" Grid.ColumnSpan="3" FontSize="24" FontWeight="Bold" Margin="20,0,0,0" VerticalAlignment="Center" Height="81" HorizontalAlignment="Stretch"/>
+        <TextBox x:Name="marca" Grid.Row="1" Margin="20,15,0,0" Header="Marca"></TextBox>
+        <TextBox x:Name="modelo" Grid.Column="0" Grid.Row="2" Header="Modelo" Margin="20,15,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left"/>
+        <TextBox x:Name="color" Grid.Column="0" Grid.Row="3" Header="Color" Margin="20,15,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left"/>
+        <StackPanel x:Name="paises" Grid.Column="1" Grid.Row="4" Orientation="Horizontal">
+            <ComboBox Header="País de matriculación" PlaceholderText="España" Margin="20,15,0,0">
+                <x:String>Inglaterra</x:String>
+                <x:String>Andorra</x:String>
+                <x:String>Portugal</x:String>
+                <x:String>Francia</x:String>
             </ComboBox>
         </StackPanel>
-        <TextBox Grid.Column="1" Grid.Row="1" Margin="20,15,0,0" Header="Associate"></TextBox>
-        <TextBox Grid.Column="1" Grid.Row="2" Margin="20,15,0,0" Header="Phone"></TextBox>
-        <DatePicker Grid.Column="1" Grid.Row="3" Margin="20,15,0,0" Header="Target Install Date"/>
-        <TimePicker Grid.Column="1" Grid.Row="5" Margin="20,15,0,0" Header="Install time"/>
-
-
+        <TextBox x:Name="matricula" Grid.Column="1" Grid.Row="1" Margin="20,15,0,0" Header="Matricula" MaxLength="8"></TextBox>
+        <StackPanel Grid.Column="0" Grid.Row="4" Margin="20,15,0,0">
+            <TextBlock Text="Tipo de combustible:"/>
+            <RadioButton Checked="HandleCheck" GroupName="grupo" Content="Diesel" />
+            <RadioButton Checked="HandleCheck" GroupName="grupo" Content="Gasolina" />
+            <RadioButton Checked="HandleCheck" GroupName="grupo" Content="Electrico" />
+        </StackPanel>
+        <TextBox x:Name="telefono" Grid.Column="1" Grid.Row="2" Margin="20,15,0,0" Header="Teléfono"></TextBox>
+        <DatePicker x:Name="fecha" Grid.Column="1" Grid.Row="3" Margin="20,15,0,0" Header="Fecha Matriculación"/>
+        <StackPanel Orientation="Horizontal" Grid.Column="2" Grid.Row="7" HorizontalAlignment="Right">
+            <Button Content="Insertar" Margin="0,0,20,0"/>
+            <Button Content="Borrar Datos" Margin="0,0,20,0" Click="Borrar_Datos_Click"/>
+        </StackPanel>
+        
     </Grid>
 </Page>

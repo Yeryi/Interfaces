@@ -26,5 +26,20 @@ namespace Proyecto
         {
             this.InitializeComponent();
         }
+
+        private void HandleCheck(object sender, RoutedEventArgs e)
+        {
+            RadioButton rb = sender as RadioButton;
+        }
+
+        public void Borrar_Datos_Click(object sender,RoutedEventArgs e)
+        {
+            marca.Text = "";
+            modelo.Text = "";
+            color.Text = "";
+            matricula.Text = "";
+            telefono.Text = "";
+            
+        }
     }
 }
