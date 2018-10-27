@@ -25,7 +25,8 @@ namespace Proyecto
         public MainPage()
         {
             this.InitializeComponent();
-        }
+			frame.Navigate(typeof(Principal));
+		}
 
         public void boton_menu_click(object sender, RoutedEventArgs e)
         {
@@ -46,5 +47,26 @@ namespace Proyecto
         {
             frame.Navigate(typeof(Eliminar));
         }
-    }
+
+		public void boton_home_click(object sender, RoutedEventArgs e)
+		{
+			frame.Navigate(typeof(Principal));
+		}
+
+		public void boton_atras_click(object sender, RoutedEventArgs e)
+		{
+			if (frame.CanGoBack)
+			{
+				frame.GoBack();
+			}
+		}
+
+		public void boton_adelante_click(object sender, RoutedEventArgs e)
+		{
+			if (frame.CanGoForward)
+			{
+				frame.GoForward();
+			}
+		}
+	}
 }
