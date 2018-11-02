@@ -30,6 +30,7 @@ namespace SQL
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            Acceso.InitializeDatabase();
         }
 
         /// <summary>
