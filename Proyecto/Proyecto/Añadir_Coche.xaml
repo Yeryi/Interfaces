@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="Proyecto.Añadir"
+    x:Class="Proyecto.Añadir_Coche"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Proyecto"
@@ -23,31 +23,31 @@
             <RowDefinition Height="80px"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Insertar Vehiculos" Grid.Column="0" Grid.ColumnSpan="3" FontSize="24" FontWeight="Bold" Margin="20,0,0,0" VerticalAlignment="Center" Height="81" HorizontalAlignment="Stretch"/>
-        <TextBox x:Name="marca" Grid.Row="1" Margin="20,15,0,0" Header="Marca"></TextBox>
+        <TextBlock Text="Insertar Vehículo" Grid.Column="0" Grid.ColumnSpan="3" FontSize="24" FontWeight="Bold" Margin="20,0,0,0" VerticalAlignment="Center" Height="81" HorizontalAlignment="Stretch"/>
+        <TextBox x:Name="marca" Grid.Row="1" Margin="20,15,0,0" Header="Marca" Width="400" HorizontalAlignment="Left"></TextBox>
         <TextBox x:Name="modelo" Grid.Column="0" Grid.Row="2" Header="Modelo" Margin="20,15,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left"/>
         <TextBox x:Name="color" Grid.Column="0" Grid.Row="3" Header="Color" Margin="20,15,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left"/>
         <StackPanel x:Name="paises" Grid.Column="1" Grid.Row="4" Orientation="Horizontal">
             <ComboBox Header="País de matriculación" PlaceholderText="España" Margin="20,15,0,0">
+                <x:String>España</x:String>
                 <x:String>Inglaterra</x:String>
                 <x:String>Andorra</x:String>
                 <x:String>Portugal</x:String>
                 <x:String>Francia</x:String>
             </ComboBox>
         </StackPanel>
-        <TextBox x:Name="matricula" Grid.Column="1" Grid.Row="1" Margin="20,15,0,0" Header="Matricula" MaxLength="8"></TextBox>
+        <TextBox x:Name="matricula" Grid.Column="1" Grid.Row="1" Margin="20,15,0,0" Header="Matricula" MaxLength="8" Width="400" HorizontalAlignment="Left"></TextBox>
         <StackPanel Grid.Column="0" Grid.Row="4" Margin="20,15,0,0">
             <TextBlock Text="Tipo de combustible:"/>
             <RadioButton Checked="HandleCheck" GroupName="grupo" Content="Diesel" />
             <RadioButton Checked="HandleCheck" GroupName="grupo" Content="Gasolina" />
             <RadioButton Checked="HandleCheck" GroupName="grupo" Content="Electrico" />
         </StackPanel>
-        <TextBox x:Name="telefono" Grid.Column="1" Grid.Row="2" Margin="20,15,0,0" Header="Teléfono"></TextBox>
+        <TextBox x:Name="telefono" Grid.Column="1" Grid.Row="2" Margin="20,15,0,0" Header="Teléfono" HorizontalAlignment="Left" Width="400"></TextBox>
         <DatePicker x:Name="fecha" Grid.Column="1" Grid.Row="3" Margin="20,15,0,0" Header="Fecha Matriculación"/>
         <StackPanel Orientation="Horizontal" Grid.Column="2" Grid.Row="7" HorizontalAlignment="Right">
             <Button Content="Insertar" Margin="0,0,20,0"/>
             <Button Content="Borrar Datos" Margin="0,0,20,0" Click="Borrar_Datos_Click"/>
         </StackPanel>
-        
     </Grid>
 </Page>

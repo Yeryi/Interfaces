@@ -27,22 +27,43 @@
 					<Button Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}" Margin="0,20,0,0" Width="296" HorizontalContentAlignment="Left" Click="Boton_lista_click">
 						<StackPanel Orientation="Horizontal">
 							<SymbolIcon Symbol="List" Margin="0,0,10,0"/>
-							<TextBlock Text="Lista"/>
+                            <TextBlock Text="Lista De Concesionarios"/>
 						</StackPanel>
 					</Button>
-					<Button Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}" Margin="0,20,0,0" Width="296" HorizontalContentAlignment="Left" Click="Boton_añadir_click">
+
+                    <Button Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}" Margin="0,20,0,0" Width="296" HorizontalContentAlignment="Left" Click="Boton_lista_click">
+                        <StackPanel Orientation="Horizontal">
+                            <SymbolIcon Symbol="List" Margin="0,0,10,0"/>
+                            <TextBlock Text="Lista De Coches"/>
+                        </StackPanel>
+                    </Button>
+                    <Button Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}" Margin="0,20,0,0" Width="296" HorizontalContentAlignment="Left" Click="Boton_añadir_concesionario_click">
 						<StackPanel Orientation="Horizontal">
 							<SymbolIcon Symbol="Add" Margin="0,0,10,0"/>
-							<TextBlock Text="Añadir"/>
+							<TextBlock Text="Añadir Concesionario"/>
 						</StackPanel>
 					</Button>
-					<Button Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}" Margin="0,20,0,0" Width="296" HorizontalContentAlignment="Left" Click="Boton_eliminar_click">
+
+                    <Button Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}" Margin="0,20,0,0" Width="296" HorizontalContentAlignment="Left" Click="Boton_añadir_coche_click">
+                        <StackPanel Orientation="Horizontal">
+                            <SymbolIcon Symbol="Add" Margin="0,0,10,0"/>
+                            <TextBlock Text="Añadir Coche"/>
+                        </StackPanel>
+                    </Button>
+                    <Button Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}" Margin="0,20,0,0" Width="296" HorizontalContentAlignment="Left" Click="Boton_eliminar_click">
 						<StackPanel Orientation="Horizontal">
 							<SymbolIcon Symbol="Delete" Margin="0,0,10,0"/>
-							<TextBlock Text="Eliminar"/>
+							<TextBlock Text="Eliminar Concesionario"/>
 						</StackPanel>
 					</Button>
-				</StackPanel>
+
+                    <Button Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}" Margin="0,20,0,0" Width="296" HorizontalContentAlignment="Left" Click="Boton_eliminar_click">
+                        <StackPanel Orientation="Horizontal">
+                            <SymbolIcon Symbol="Delete" Margin="0,0,10,0"/>
+                            <TextBlock Text="Eliminar Coche"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
 			</SplitView.Pane>
 
 			<Frame x:Name="frame" Margin="0,0,0,0">

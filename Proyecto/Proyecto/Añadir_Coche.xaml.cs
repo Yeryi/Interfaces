@@ -20,11 +20,26 @@ namespace Proyecto
     /// <summary>
     /// Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
     /// </summary>
-    public sealed partial class Lista : Page
+    public sealed partial class Añadir_Coche : Page
     {
-        public Lista()
+        public Añadir_Coche()
         {
             this.InitializeComponent();
+        }
+
+        private void HandleCheck(object sender, RoutedEventArgs e)
+        {
+            RadioButton rb = sender as RadioButton;
+        }
+
+        public void Borrar_Datos_Click(object sender, RoutedEventArgs e)
+        {
+            marca.Text = "";
+            modelo.Text = "";
+            color.Text = "";
+            matricula.Text = "";
+            telefono.Text = "";
+
         }
     }
 }

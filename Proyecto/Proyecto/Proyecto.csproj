@@ -95,14 +95,18 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Añadir.xaml.cs">
-      <DependentUpon>Añadir.xaml</DependentUpon>
+    <Compile Include="Añadir_Coche.xaml.cs">
+      <DependentUpon>Añadir_Coche.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Añadir_Concesionario.xaml.cs">
+      <DependentUpon>Añadir_Concesionario.xaml</DependentUpon>
     </Compile>
     <Compile Include="Eliminar.xaml.cs">
       <DependentUpon>Eliminar.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Lista.xaml.cs">
-      <DependentUpon>Lista.xaml</DependentUpon>
+    <Compile Include="Modelos\Concesionario.cs" />
+    <Compile Include="Lista_Concesionarios.xaml.cs">
+      <DependentUpon>Lista_Concesionarios.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -134,7 +138,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Añadir.xaml">
+    <Page Include="Añadir_Coche.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Añadir_Concesionario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -143,6 +151,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Lista.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Lista_Concesionarios.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

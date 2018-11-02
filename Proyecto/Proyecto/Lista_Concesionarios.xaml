@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="Proyecto.Lista_Concesionarios"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Proyecto"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:datos="using:Proyecto.Modelos"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <GridView ItemsSource="{x:Bind Concesionarios}">
+            <GridView.ItemTemplate>
+                <DataTemplate x:DataType="datos:Concesionario">
+                    <StackPanel>
+                        <!--<Image Width="150" Source="{x:Bind coverImage}"/>-->
+                        <TextBlock FontSize="16" Text="{x:Bind id}"/>
+                        <TextBlock FontSize="16" Text="{x:Bind nombre}"/>
+                        <TextBlock FontSize="16" Text="{x:Bind provincia}"/>
+                        <TextBlock FontSize="16" Text="{x:Bind pais}"/>
+                        <TextBlock FontSize="16" Text="{x:Bind ntrabajadores}"/>
+                        <TextBlock FontSize="16" Text="{x:Bind telefono}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+    </Grid>
+</Page>

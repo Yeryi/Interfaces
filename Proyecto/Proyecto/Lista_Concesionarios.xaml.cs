@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Proyecto.Modelos;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -20,26 +21,14 @@ namespace Proyecto
     /// <summary>
     /// Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
     /// </summary>
-    public sealed partial class Añadir : Page
+    public sealed partial class Lista_Concesionarios : Page
     {
-        public Añadir()
+        private List<Concesionario> Concesionarios;
+
+        public Lista_Concesionarios()
         {
             this.InitializeComponent();
-        }
-
-        private void HandleCheck(object sender, RoutedEventArgs e)
-        {
-            RadioButton rb = sender as RadioButton;
-        }
-
-        public void Borrar_Datos_Click(object sender,RoutedEventArgs e)
-        {
-            marca.Text = "";
-            modelo.Text = "";
-            color.Text = "";
-            matricula.Text = "";
-            telefono.Text = "";
-            
+            Concesionarios = ManejarConcesionario.GetConcesionarios();
         }
     }
 }

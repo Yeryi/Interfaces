@@ -38,9 +38,14 @@ namespace Proyecto
             frame.Navigate(typeof(Lista));
         }
 
-        public void Boton_añadir_click(object sender, RoutedEventArgs e)
+        public void Boton_añadir_coche_click(object sender, RoutedEventArgs e)
         {
-            frame.Navigate(typeof(Añadir));
+            frame.Navigate(typeof(Añadir_Coche));
+        }
+
+        public void Boton_añadir_concesionario_click(object sender, RoutedEventArgs e)
+        {
+            frame.Navigate(typeof(Añadir_Concesionario));
         }
 
         public void Boton_eliminar_click(object sender, RoutedEventArgs e)
