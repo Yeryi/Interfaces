@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Proyecto.Modelos;
+using SQLite.Net.Platform.WinRT;
 using Microsoft.Data.Sqlite;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0xc0a
@@ -31,8 +32,8 @@ namespace Proyecto
             this.InitializeComponent();
 			frame.Navigate(typeof(Principal));
             var path = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "db.sqlite");
-            conn = new SqliteConnection(new SQLitePlatfromWinRT(), path);
-            conn.CreateTable<Concesionario>();
+            conn = new SqliteConnection(new SQLitePlatformWinRT(),path);
+            //conn.CreateTable<Concesionario>();
 		}
 
         public void boton_menu_click(object sender, RoutedEventArgs e)
