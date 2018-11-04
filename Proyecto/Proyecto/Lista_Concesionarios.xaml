@@ -15,11 +15,11 @@
             <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
 
-        <GridView ItemsSource="{x:Bind Concesionarios}">
+        <!--<GridView ItemsSource="{x:Bind Concesionarios}">
             <GridView.ItemTemplate>
                 <DataTemplate x:DataType="datos:Concesionario">
                     <StackPanel>
-                        <!--<Image Width="150" Source="{x:Bind coverImage}"/>-->
+                        <Image Width="150" Source="{x:Bind coverImage}"/>
                         <TextBlock FontSize="16" Text="{x:Bind id}"/>
                         <TextBlock FontSize="16" Text="{x:Bind nombre}"/>
                         <TextBlock FontSize="16" Text="{x:Bind provincia}"/>
@@ -29,6 +29,6 @@
                     </StackPanel>
                 </DataTemplate>
             </GridView.ItemTemplate>
-        </GridView>
+        </GridView> -->
     </Grid>
 </Page>

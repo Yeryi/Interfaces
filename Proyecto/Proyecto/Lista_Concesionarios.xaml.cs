@@ -28,7 +28,7 @@ namespace Proyecto
         public Lista_Concesionarios()
         {
             this.InitializeComponent();
-            Concesionarios = ManejarConcesionario.GetConcesionarios();
+            //Concesionarios = ManejarConcesionario.GetConcesionarios();
         }
     }
 }
