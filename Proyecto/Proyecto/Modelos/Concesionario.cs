@@ -16,7 +16,7 @@ namespace Proyecto.Modelos
         public string telefono { get; set; }
     }
 
-    public class ManejarConcesionario
+    /*public class ManejarConcesionario
     {
         public static List<Concesionario> GetConcesionarios()
         {
@@ -25,5 +25,5 @@ namespace Proyecto.Modelos
             concesionarios.Add(new Concesionario { id = 1, nombre = "Peugeot", provincia = "Almeria", pais = "España", ntrabajadores = 32, telefono = "951342198" });
             concesionarios.Add(new Concesionario { id = 2, nombre = "Renault", provincia = "Almeria", pais = "España", ntrabajadores = 43, telefono = "952507845" });
         }
-    }
+    }*/
 }
