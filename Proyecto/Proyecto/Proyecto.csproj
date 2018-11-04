@@ -179,12 +179,6 @@
   <ItemGroup>
     <None Include="Proyecto_TemporaryKey.pfx" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SQL\SQL.csproj">
-      <Project>{827e3b35-09d1-46db-b674-8864b94b665a}</Project>
-      <Name>SQL</Name>
-    </ProjectReference>
-  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

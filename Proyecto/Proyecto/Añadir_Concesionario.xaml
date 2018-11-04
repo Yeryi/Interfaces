@@ -41,7 +41,7 @@
         <TextBox x:Name="trabajadores" Grid.Column="0" Grid.Row="5" Margin="20,15,0,0" Header="Número De Trabajadores" MaxLength="20" Width="400" HorizontalAlignment="Left"></TextBox>
         <TextBox x:Name="telefono" Grid.Column="0" Grid.Row="6" Margin="20,15,0,0" Header="Teléfono" MaxLength="11" HorizontalAlignment="Left" Width="400"></TextBox>
         <StackPanel Orientation="Horizontal" Grid.Column="2" Grid.Row="7" HorizontalAlignment="Right">
-            <Button Content="Insertar" Margin="0,0,20,0"/>
+            <Button Content="Insertar" Margin="0,0,20,0" Click="Insertar_Datos_Click"/>
             <Button Content="Borrar Datos" Margin="0,0,20,0" Click="Borrar_Datos_Click"/>
         </StackPanel>
     </Grid>

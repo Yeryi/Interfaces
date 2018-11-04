@@ -34,7 +34,23 @@ namespace Proyecto
             provincia.Text = "";
             trabajadores.Text = "";
             telefono.Text = "";
+        }
 
+        public void Insertar_Datos_Click(object sender, RoutedEventArgs e)
+        {
+            Datos_Concesionario();
+        }
+
+        public void Datos_Concesionario()
+        {
+            int id2,trabajadores2;
+            String nombre2, provincia2, telefono2;
+
+            id2 = int.Parse(id.Text);
+            nombre2 = nombre.Text;
+            provincia2 = provincia.Text;
+            telefono2 = telefono.Text;
+            trabajadores2 = int.Parse(telefono.Text);
         }
     }
 }
