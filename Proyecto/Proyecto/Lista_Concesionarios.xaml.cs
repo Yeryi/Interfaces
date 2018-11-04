@@ -23,7 +23,7 @@ namespace Proyecto
     /// </summary>
     public sealed partial class Lista_Concesionarios : Page
     {
-        private List<Concesionario> Concesionarios;
+        //private List<Concesionario> Concesionarios;
 
         public Lista_Concesionarios()
         {
