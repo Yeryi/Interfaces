@@ -28,12 +28,14 @@ namespace Proyecto
     {
         SQLiteConnection conn;
         private List<Coches> coche;
+        String matricula;
         public Lista_Coches()
         {
             this.InitializeComponent();
             var path = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "db.sqlite");
             conn = new SQLiteConnection(new SQLitePlatformWinRT(), path);
             GetCoches();
+            listaCoche.SelectionChanged += Lista_Seleccion;
         }
 
         public void GetCoches()
@@ -43,11 +45,29 @@ namespace Proyecto
 
             foreach (var data in query)
             {
-                coche.Add(new Coches { marca = data.marca, modelo = data.modelo, color = data.color, pais = data.pais, matricula = data.matricula});
+                coche.Add(new Coches { marca = data.marca, modelo = data.modelo, color = data.color,combustible=data.combustible, matricula = data.matricula,fecha=data.fecha, pais = data.pais});
             }
 
             listaCoche.ItemsSource = null;
             listaCoche.ItemsSource = coche;
+        }
+
+        public void Lista_Seleccion(Object sender, SelectionChangedEventArgs e)
+        {
+            Coches selected = (Coches)listaCoche.SelectedItem;
+            if (selected != null)
+            {
+                matricula = selected.matricula;
+            }
+        }
+
+        public void Click_Eliminar(Object sender, RoutedEventArgs e)
+        {
+            conn.RunInTransaction(() =>
+            {
+                var c = conn.Execute("DELETE FROM Coches WHERE matricula = ?", matricula);
+            });
+            GetCoches();
         }
     }
 }

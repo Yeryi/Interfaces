@@ -50,19 +50,6 @@
                             <TextBlock Text="Añadir Coche"/>
                         </StackPanel>
                     </Button>
-                    <Button Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}" Margin="0,20,0,0" Width="296" HorizontalContentAlignment="Left" Click="Boton_eliminar_click">
-						<StackPanel Orientation="Horizontal">
-							<SymbolIcon Symbol="Delete" Margin="0,0,10,0"/>
-							<TextBlock Text="Eliminar Concesionario"/>
-						</StackPanel>
-					</Button>
-
-                    <Button Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}" Margin="0,20,0,0" Width="296" HorizontalContentAlignment="Left" Click="Boton_eliminar_click">
-                        <StackPanel Orientation="Horizontal">
-                            <SymbolIcon Symbol="Delete" Margin="0,0,10,0"/>
-                            <TextBlock Text="Eliminar Coche"/>
-                        </StackPanel>
-                    </Button>
                 </StackPanel>
 			</SplitView.Pane>
 

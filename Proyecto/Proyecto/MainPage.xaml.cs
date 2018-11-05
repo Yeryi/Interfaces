@@ -64,11 +64,6 @@ namespace Proyecto
             frame.Navigate(typeof(Añadir_Concesionario));
         }
 
-        public void Boton_eliminar_click(object sender, RoutedEventArgs e)
-        {
-            frame.Navigate(typeof(Eliminar));
-        }
-
 		public void boton_home_click(object sender, RoutedEventArgs e)
 		{
 			frame.Navigate(typeof(Principal));

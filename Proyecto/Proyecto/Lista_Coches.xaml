@@ -9,19 +9,42 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <ListView x:Name="listaCoche" VerticalContentAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,0,0,50" VerticalAlignment="Stretch">
+        <ListView x:Name="listaCoche" VerticalContentAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,0,0,50" VerticalAlignment="Stretch" SelectionChanged="Lista_Seleccion">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Vertical" Padding="5">
-                        <TextBlock Text="{Binding marca}" Foreground="Black" FontWeight="Bold" FontSize="20" Margin="20,20,0,0"/>
-                        <TextBlock Text="{Binding modelo}" Foreground="Black" FontWeight="Bold" FontSize="20" Margin="20,20,0,0"/>
-                        <TextBlock Text="{Binding color}" Foreground="Black" FontWeight="Bold" FontSize="20" Margin="20,20,0,0"/>
-                        <TextBlock Text="{Binding pais}" Foreground="Black" FontWeight="Bold" FontSize="20" Margin="20,20,0,0"/>
-                        <TextBlock Text="{Binding matricula}" Foreground="Black" FontWeight="Bold" FontSize="20" Margin="20,20,0,0"/>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Marca: " FontWeight="Bold" FontSize="20" Margin="20,20,0,0"/>
+                            <TextBlock Text="{Binding marca}" FontSize="20" Margin="20,20,0,0"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Modelo: " FontWeight="Bold" FontSize="20" Margin="20,20,0,0"/>
+                            <TextBlock Text="{Binding modelo}" FontSize="20" Margin="20,20,0,0"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Color: " FontWeight="Bold" FontSize="20" Margin="20,20,0,0"/>
+                            <TextBlock Text="{Binding color}" FontSize="20" Margin="20,20,0,0"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Combustible: " FontWeight="Bold" FontSize="20" Margin="20,20,0,0"/>
+                            <TextBlock Text="{Binding combustible}" FontSize="20" Margin="20,20,0,0"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Matricula: " FontWeight="Bold" FontSize="20" Margin="20,20,0,0"/>
+                            <TextBlock Text="{Binding matricula}" FontSize="20" Margin="20,20,0,0"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Fecha Matriculación: " FontWeight="Bold" FontSize="20" Margin="20,20,0,0"/>
+                            <TextBlock Text="{Binding fecha}" FontSize="20" Margin="20,20,0,0"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="País: " FontWeight="Bold" FontSize="20" Margin="20,20,0,0"/>
+                            <TextBlock Text="{Binding pais}" FontSize="20" Margin="20,20,0,0"/>
+                        </StackPanel>
+                        <Button Content="Eliminar" Margin="20,20,0,0" Click="Click_Eliminar"/>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-
     </Grid>
 </Page>

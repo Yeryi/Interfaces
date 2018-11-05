@@ -54,21 +54,39 @@ namespace Proyecto
 
         public void Datos_Concesionario()
         {
-            String marca2, modelo2, color2, matricula2, pais2;
+            String marca2, modelo2, color2, matricula2, pais2,fecha2;
+            String combustible2 = "";
+            DateTime fecha1 = fecha.Date.DateTime;
+            //var date = this.fecha.Date;
 
             marca2 = marca.Text;
             modelo2 = modelo.Text;
             color2 = color.Text;
             pais2 = paises.SelectedItem.ToString();
             matricula2 = matricula.Text;
+            fecha2 = fecha1.ToString();
+
+            if (diesel.IsChecked==true)
+            {
+                combustible2 = "Diesel";
+            }else if (gasolina.IsChecked == true)
+            {
+                combustible2 = "Gasolina";
+            }else if (electrico.IsChecked == true)
+            {
+                combustible2 = "Electrico";
+            }
 
             conn.Insert(new Coches()
             {
                 marca = marca2,
                 modelo = modelo2,
                 color = color2,
-                pais = pais2,
-                matricula = matricula2
+                combustible=combustible2,
+                matricula = matricula2,
+                fecha=fecha2,
+                pais = pais2
+
             });
 
             marca.Text = "";

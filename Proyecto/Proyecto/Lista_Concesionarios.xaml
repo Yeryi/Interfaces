@@ -10,16 +10,35 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <ListView x:Name="listaConce" VerticalContentAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,0,0,50" VerticalAlignment="Stretch">
+        <ListView x:Name="listaConce" VerticalContentAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,0,0,50" VerticalAlignment="Stretch" SelectionChanged="Lista_Seleccion">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Vertical" Padding="5">
-                        <TextBlock Text="{Binding id}" Foreground="Black" FontWeight="Bold" FontSize="20" Margin="20,20,0,0"/>
-                        <TextBlock Text="{Binding nombre}" Foreground="Black" FontWeight="Bold" FontSize="20" Margin="20,20,0,0"/>
-                        <TextBlock Text="{Binding provincia}" Foreground="Black" FontWeight="Bold" FontSize="20" Margin="20,20,0,0"/>
-                        <TextBlock Text="{Binding pais}" Foreground="Black" FontWeight="Bold" FontSize="20" Margin="20,20,0,0"/>
-                        <TextBlock Text="{Binding telefono}" Foreground="Black" FontWeight="Bold" FontSize="20" Margin="20,20,0,0"/>
-                        <TextBlock Text="{Binding ntrabajadores}" Foreground="Black" FontWeight="Bold" FontSize="20" Margin="20,20,0,0"/>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="ID: " FontSize="20" FontWeight="Bold" Margin="20,20,0,0"/>
+                            <TextBlock Text="{Binding id}" FontSize="20" Margin="20,20,0,0"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Nombre: " FontSize="20" FontWeight="Bold" Margin="20,20,0,0"/>
+                            <TextBlock Text="{Binding nombre}" FontSize="20" Margin="20,20,0,0"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Provincia: " FontSize="20" FontWeight="Bold" Margin="20,20,0,0"/>
+                            <TextBlock Text="{Binding provincia}" FontSize="20" Margin="20,20,0,0"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="País: " FontSize="20" FontWeight="Bold" Margin="20,20,0,0"/>
+                            <TextBlock Text="{Binding pais}" FontSize="20" Margin="20,20,0,0"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Teléfono: " FontSize="20" FontWeight="Bold" Margin="20,20,0,0"/>
+                            <TextBlock Text="{Binding telefono}" FontSize="20" Margin="20,20,0,0"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Número de trabajadores: " FontSize="20" FontWeight="Bold" Margin="20,20,0,0"/>
+                            <TextBlock Text="{Binding ntrabajadores}" FontSize="20" Margin="20,20,0,0"/>
+                        </StackPanel>
+                        <Button Content="Eliminar" Margin="20,20,0,0" Click="Click_Eliminar"/>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>

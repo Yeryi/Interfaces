@@ -27,13 +27,23 @@ namespace Proyecto
     {
         SQLiteConnection conn;
         private List<Concesionario> concesionarios;
-
+        int id;
         public Lista_Concesionarios()
         {
             this.InitializeComponent();
             var path = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "db.sqlite");
             conn = new SQLiteConnection(new SQLitePlatformWinRT(), path);
             GetConcesionarios();
+            listaConce.SelectionChanged += Lista_Seleccion;
+        }
+
+        private void Lista_Seleccion(object sender, SelectionChangedEventArgs e)
+        {
+            Concesionario selected = (Concesionario)listaConce.SelectedItem;
+            if (selected != null)
+            {
+                id = selected.id;
+            }
         }
 
         public void GetConcesionarios()
@@ -43,11 +53,20 @@ namespace Proyecto
 
             foreach(var data in query)
             {
-                concesionarios.Add(new Concesionario {id=data.id, nombre=data.nombre,provincia=data.provincia,pais=data.pais,telefono=data.telefono,ntrabajadores=data.ntrabajadores});
+                concesionarios.Add(new Concesionario {id=data.id, nombre=data.nombre,provincia=data.provincia,pais=data.pais,ntrabajadores=data.ntrabajadores, telefono = data.telefono });
             }
 
             listaConce.ItemsSource = null;
             listaConce.ItemsSource = concesionarios;
+        }
+
+        public void Click_Eliminar(Object sender, RoutedEventArgs e)
+        {
+            conn.RunInTransaction(() =>
+            {
+                var c = conn.Execute("DELETE FROM Concesionario WHERE id = ?", id);
+            });
+            GetConcesionarios();
         }
     }
 }

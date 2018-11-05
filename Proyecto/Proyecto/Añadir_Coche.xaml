@@ -27,6 +27,14 @@
         <TextBox x:Name="marca" Grid.Row="1" Margin="20,15,0,0" Header="Marca" Width="400" HorizontalAlignment="Left"></TextBox>
         <TextBox x:Name="modelo" Grid.Column="0" Grid.Row="2" Header="Modelo" Margin="20,15,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left"/>
         <TextBox x:Name="color" Grid.Column="0" Grid.Row="3" Header="Color" Margin="20,15,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left"/>
+        <StackPanel x:Name="combustible" Grid.Column="0" Grid.Row="4" Margin="20,15,0,0">
+            <TextBlock Text="Tipo de combustible:"/>
+            <RadioButton x:Name="diesel" Checked="HandleCheck" GroupName="grupo" Content="Diesel" />
+            <RadioButton x:Name="gasolina" Checked="HandleCheck" GroupName="grupo" Content="Gasolina" />
+            <RadioButton x:Name="electrico" Checked="HandleCheck" GroupName="grupo" Content="Electrico" />
+        </StackPanel>
+        <TextBox x:Name="matricula" Grid.Column="1" Grid.Row="1" Margin="20,15,0,0" Header="Matricula" MaxLength="8" Width="400" HorizontalAlignment="Left"></TextBox>
+        <DatePicker x:Name="fecha" Grid.Column="1" Grid.Row="2" Margin="20,15,0,0" Header="Fecha Matriculación"/>
         <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal">
             <ComboBox x:Name="paises" Header="País de matriculación" PlaceholderText="España" Margin="20,15,0,0">
                 <x:String>España</x:String>
@@ -36,14 +44,6 @@
                 <x:String>Francia</x:String>
             </ComboBox>
         </StackPanel>
-        <TextBox x:Name="matricula" Grid.Column="1" Grid.Row="1" Margin="20,15,0,0" Header="Matricula" MaxLength="8" Width="400" HorizontalAlignment="Left"></TextBox>
-        <StackPanel x:Name="combustible" Grid.Column="0" Grid.Row="4" Margin="20,15,0,0">
-            <TextBlock Text="Tipo de combustible:"/>
-            <RadioButton Checked="HandleCheck" GroupName="grupo" Content="Diesel" />
-            <RadioButton Checked="HandleCheck" GroupName="grupo" Content="Gasolina" />
-            <RadioButton Checked="HandleCheck" GroupName="grupo" Content="Electrico" />
-        </StackPanel>
-        <DatePicker x:Name="fecha" Grid.Column="1" Grid.Row="2" Margin="20,15,0,0" Header="Fecha Matriculación"/>
         <StackPanel Orientation="Horizontal" Grid.Column="2" Grid.Row="7" HorizontalAlignment="Right">
             <Button Content="Insertar" Margin="0,0,20,0" Click="Insertar_Datos_Click"/>
             <Button Content="Borrar Datos" Margin="0,0,20,0" Click="Borrar_Datos_Click"/>

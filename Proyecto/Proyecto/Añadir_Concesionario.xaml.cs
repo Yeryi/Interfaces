@@ -58,15 +58,15 @@ namespace Proyecto
             provincia2 = provincia.Text;
             pais2 = pais.SelectedItem.ToString();
             telefono2 = telefono.Text;
-            trabajadores2 = int.Parse(telefono.Text);
+            trabajadores2 = int.Parse(trabajadores.Text);
 
             conn.Insert(new Concesionario() {
                 id = id2,
                 nombre = nombre2,
                 provincia = provincia2,
                 pais=pais2,
-                telefono = telefono2,
-                ntrabajadores = trabajadores2
+                ntrabajadores = trabajadores2,
+                telefono = telefono2
             });
             id.Text = "";
             nombre.Text = "";
