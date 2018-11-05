@@ -24,14 +24,14 @@
 		<SplitView Grid.Row="1" Name="MiSplitView" IsPaneOpen="False" DisplayMode="CompactOverlay" OpenPaneLength="296" CompactPaneLength="40">
 			<SplitView.Pane>
 				<StackPanel>
-					<Button Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}" Margin="0,20,0,0" Width="296" HorizontalContentAlignment="Left" Click="Boton_lista_click">
+					<Button Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}" Margin="0,20,0,0" Width="296" HorizontalContentAlignment="Left" Click="Boton_lista_concesionarios_click">
 						<StackPanel Orientation="Horizontal">
 							<SymbolIcon Symbol="List" Margin="0,0,10,0"/>
                             <TextBlock Text="Lista De Concesionarios"/>
 						</StackPanel>
 					</Button>
 
-                    <Button Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}" Margin="0,20,0,0" Width="296" HorizontalContentAlignment="Left" Click="Boton_lista_click">
+                    <Button Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}" Margin="0,20,0,0" Width="296" HorizontalContentAlignment="Left" Click="Boton_lista_coches_click">
                         <StackPanel Orientation="Horizontal">
                             <SymbolIcon Symbol="List" Margin="0,0,10,0"/>
                             <TextBlock Text="Lista De Coches"/>

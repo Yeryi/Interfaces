@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using SQLite.Net;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -12,6 +13,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Proyecto.Modelos;
+using SQLite.Net.Platform.WinRT;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -22,9 +25,13 @@ namespace Proyecto
     /// </summary>
     public sealed partial class Añadir_Coche : Page
     {
+        SQLiteConnection conn;
+        private List<Coches> coche;
         public Añadir_Coche()
         {
             this.InitializeComponent();
+            var path = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "db.sqlite");
+            conn = new SQLiteConnection(new SQLitePlatformWinRT(), path);
         }
 
         private void HandleCheck(object sender, RoutedEventArgs e)
@@ -38,7 +45,36 @@ namespace Proyecto
             modelo.Text = "";
             color.Text = "";
             matricula.Text = "";
-            telefono.Text = "";
+        }
+
+        public void Insertar_Datos_Click(object sender, RoutedEventArgs e)
+        {
+            Datos_Concesionario();
+        }
+
+        public void Datos_Concesionario()
+        {
+            String marca2, modelo2, color2, matricula2, pais2;
+
+            marca2 = marca.Text;
+            modelo2 = modelo.Text;
+            color2 = color.Text;
+            pais2 = paises.SelectedItem.ToString();
+            matricula2 = matricula.Text;
+
+            conn.Insert(new Coches()
+            {
+                marca = marca2,
+                modelo = modelo2,
+                color = color2,
+                pais = pais2,
+                matricula = matricula2
+            });
+
+            marca.Text = "";
+            modelo.Text = "";
+            color.Text = "";
+            matricula.Text = "";
 
         }
     }

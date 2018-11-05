@@ -13,8 +13,9 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Proyecto.Modelos;
-using SQLite.Net.Platform.WinRT;
 using Microsoft.Data.Sqlite;
+using SQLite.Net.Platform.WinRT;
+using SQLite.Net;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0xc0a
 
@@ -25,15 +26,17 @@ namespace Proyecto
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        SqliteConnection conn;
+        SQLiteConnection conn;
         private List<Concesionario> concesionarios;
+        private List<Coches> coches;
         public MainPage()
         {
             this.InitializeComponent();
 			frame.Navigate(typeof(Principal));
             var path = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "db.sqlite");
-            conn = new SqliteConnection(new SQLitePlatformWinRT(),path);
-            //conn.CreateTable<Concesionario>();
+            conn = new SQLiteConnection(new SQLitePlatformWinRT(),path);
+            conn.CreateTable<Concesionario>();
+            conn.CreateTable<Coches>();
 		}
 
         public void boton_menu_click(object sender, RoutedEventArgs e)
@@ -41,9 +44,14 @@ namespace Proyecto
             MiSplitView.IsPaneOpen = !MiSplitView.IsPaneOpen;
         }
 
-        public void Boton_lista_click(object sender,RoutedEventArgs e)
+        public void Boton_lista_concesionarios_click(object sender,RoutedEventArgs e)
         {
-            frame.Navigate(typeof(Lista));
+            frame.Navigate(typeof(Lista_Concesionarios));
+        }
+
+        public void Boton_lista_coches_click(object sender, RoutedEventArgs e)
+        {
+            frame.Navigate(typeof(Lista_Coches));
         }
 
         public void Boton_añadir_coche_click(object sender, RoutedEventArgs e)

@@ -29,8 +29,8 @@
         <TextBox x:Name="id" Grid.Row="1" Margin="20,15,0,0" Header="Referencia(ID)" HorizontalAlignment="Left" Width="400"></TextBox>
         <TextBox x:Name="nombre" Grid.Column="0" Grid.Row="2" Header="Nombre" Margin="20,15,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left"/>
         <TextBox x:Name="provincia" Grid.Column="0" Grid.Row="3" Header="Provincia" Margin="20,15,0,0" MaxLength="32" Width="400" HorizontalAlignment="Left"/>
-        <StackPanel x:Name="pais" Grid.Column="0" Grid.Row="4" Orientation="Horizontal">
-            <ComboBox Header="País" PlaceholderText="España" Margin="20,15,0,0">
+        <StackPanel Grid.Column="0" Grid.Row="4" Orientation="Horizontal">
+            <ComboBox x:Name="pais" Header="País" PlaceholderText="España" Margin="20,15,0,0">
                 <x:String>España</x:String>
                 <x:String>Inglaterra</x:String>
                 <x:String>Andorra</x:String>

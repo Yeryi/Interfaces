@@ -9,26 +9,20 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Margin="20">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="100"/>
-        </Grid.RowDefinitions>
-
-        <!--<GridView ItemsSource="{x:Bind Concesionarios}">
-            <GridView.ItemTemplate>
-                <DataTemplate x:DataType="datos:Concesionario">
-                    <StackPanel>
-                        <Image Width="150" Source="{x:Bind coverImage}"/>
-                        <TextBlock FontSize="16" Text="{x:Bind id}"/>
-                        <TextBlock FontSize="16" Text="{x:Bind nombre}"/>
-                        <TextBlock FontSize="16" Text="{x:Bind provincia}"/>
-                        <TextBlock FontSize="16" Text="{x:Bind pais}"/>
-                        <TextBlock FontSize="16" Text="{x:Bind ntrabajadores}"/>
-                        <TextBlock FontSize="16" Text="{x:Bind telefono}"/>
+    <Grid>
+        <ListView x:Name="listaConce" VerticalContentAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,0,0,50" VerticalAlignment="Stretch">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical" Padding="5">
+                        <TextBlock Text="{Binding id}" Foreground="Black" FontWeight="Bold" FontSize="20" Margin="20,20,0,0"/>
+                        <TextBlock Text="{Binding nombre}" Foreground="Black" FontWeight="Bold" FontSize="20" Margin="20,20,0,0"/>
+                        <TextBlock Text="{Binding provincia}" Foreground="Black" FontWeight="Bold" FontSize="20" Margin="20,20,0,0"/>
+                        <TextBlock Text="{Binding pais}" Foreground="Black" FontWeight="Bold" FontSize="20" Margin="20,20,0,0"/>
+                        <TextBlock Text="{Binding telefono}" Foreground="Black" FontWeight="Bold" FontSize="20" Margin="20,20,0,0"/>
+                        <TextBlock Text="{Binding ntrabajadores}" Foreground="Black" FontWeight="Bold" FontSize="20" Margin="20,20,0,0"/>
                     </StackPanel>
                 </DataTemplate>
-            </GridView.ItemTemplate>
-        </GridView> -->
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </Page>
