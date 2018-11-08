@@ -4,21 +4,20 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{DA3A5417-258D-4C1E-8686-3116C8435F4A}</ProjectGuid>
+    <ProjectGuid>{98C855CA-48EE-41A9-90C2-2A0E1C66234D}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Proyecto</RootNamespace>
-    <AssemblyName>Proyecto</AssemblyName>
+    <RootNamespace>AplicacionSQL</RootNamespace>
+    <AssemblyName>AplicacionSQL</AssemblyName>
     <DefaultLanguage>es-ES</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.17134.0</TargetPlatformVersion>
-    <TargetPlatformMinVersion>10.0.15063.0</TargetPlatformMinVersion>
+    <TargetPlatformMinVersion>10.0.10586.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
-    <PackageCertificateKeyFile>Proyecto_TemporaryKey.pfx</PackageCertificateKeyFile>
-    <PackageCertificateThumbprint>39D1E1441EC126B2CE85FDCE1981C2BC13227BD2</PackageCertificateThumbprint>
+    <PackageCertificateKeyFile>AplicacionSQL_TemporaryKey.pfx</PackageCertificateKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -76,7 +75,6 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>true</Prefer32Bit>
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <OutputPath>bin\x64\Release\</OutputPath>
@@ -97,25 +95,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Añadir_Coche.xaml.cs">
-      <DependentUpon>Añadir_Coche.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Añadir_Concesionario.xaml.cs">
-      <DependentUpon>Añadir_Concesionario.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Lista_Coches.xaml.cs">
-      <DependentUpon>Lista_Coches.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Modelos\Coches.cs" />
-    <Compile Include="Modelos\Concesionario.cs" />
-    <Compile Include="Lista_Concesionarios.xaml.cs">
-      <DependentUpon>Lista_Concesionarios.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Principal.xaml.cs">
-      <DependentUpon>Principal.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -123,9 +104,9 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="AplicacionSQL_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\portada.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -140,62 +121,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Añadir_Coche.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Añadir_Concesionario.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Lista_Coches.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Lista_Concesionarios.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Principal.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Data.Sqlite">
-      <Version>1.0.0</Version>
+      <Version>1.1.1</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>6.1.9</Version>
-    </PackageReference>
-    <PackageReference Include="SQLite.Net-PCL">
-      <Version>3.1.1</Version>
+      <Version>6.1.7</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Proyecto_TemporaryKey.pfx" />
-  </ItemGroup>
-  <ItemGroup>
-    <SDKReference Include="Microsoft.VCLibs.Desktop, Version=14.0">
-      <Name>Visual C++ 2015 UWP Desktop Runtime for native apps</Name>
-    </SDKReference>
-    <SDKReference Include="SQLite.UWP.2015, Version=3.25.3">
-      <Name>SQLite for Universal Windows Platform %28SQLite.UWP.2015, Version=3.25.3%29</Name>
-    </SDKReference>
+    <ProjectReference Include="..\Libreria\Libreria.csproj">
+      <Project>{a0310208-c89e-4d32-9073-79b3e25b0b90}</Project>
+      <Name>Libreria</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
-  </PropertyGroup>
-  <PropertyGroup>
-    <SignAssembly>false</SignAssembly>
-  </PropertyGroup>
-  <PropertyGroup>
-    <AssemblyOriginatorKeyFile>
-    </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -93,7 +93,6 @@ namespace Proyecto
             modelo.Text = "";
             color.Text = "";
             matricula.Text = "";
-
         }
     }
 }
