@@ -1,12 +1,15 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin_Sergio.Paginas;
 
-[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Xamarin_Sergio
 {
     public partial class App : Application
     {
+        public static NavigationPage Navigator { get; internal set; }
+        public static PaginaMaestra Master { get; internal set; }
+
         public App()
         {
             InitializeComponent();

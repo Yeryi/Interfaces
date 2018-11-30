@@ -9,7 +9,6 @@ using Xamarin.Forms.Xaml;
 
 namespace Xamarin_Sergio
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Añadir_Coches : ContentPage
 	{
 		public Añadir_Coches ()
