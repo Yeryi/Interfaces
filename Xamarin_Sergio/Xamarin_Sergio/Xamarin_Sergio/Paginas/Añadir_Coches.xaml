@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=netstandard"
-             x:Class="Xamarin_Sergio.Añadir_Coches">
+             x:Class="Xamarin_Sergio.Paginas.Añadir_Coches">
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Insertar Vehículo" FontSize="24" VerticalOptions="Center"/>
@@ -16,7 +16,7 @@
                     <x:String>Eléctrico</x:String>
                 </Picker.Items>
             </Picker>
-            <Entry x:Name="matricula" Text="Matricula" MaxLength="8"/>
+            <Entry x:Name="matricula" Text="Matricula"/>
             <DatePicker VerticalOptions="CenterAndExpand" Date="{x:Static sys:DateTime.Now}">
                 <DatePicker.Format>dd-MM-yyyy</DatePicker.Format>
             </DatePicker>

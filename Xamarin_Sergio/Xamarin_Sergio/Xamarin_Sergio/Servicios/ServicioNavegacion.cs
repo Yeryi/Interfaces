@@ -7,7 +7,7 @@ using Xamarin_Sergio.Paginas;
 
 namespace Xamarin_Sergio.Servicios
 {
-    class ServicioNavegacion
+    public class ServicioNavegacion
     {
         public async void Navigate(string pageName)
         {
@@ -16,6 +16,9 @@ namespace Xamarin_Sergio.Servicios
             {
                 case "Añadir_Coches":
                     await Navigate(new Añadir_Coches());
+                    break;
+                case "MainPage":
+                    await App.Navigator.PopToRootAsync();
                     break;
             }
         }
@@ -32,7 +35,7 @@ namespace Xamarin_Sergio.Servicios
         {
             switch (pageName)
             {
-                case "MasterPage":
+                case "PaginaMaestra":
                     App.Current.MainPage = new PaginaMaestra();
                     break;
                 default:

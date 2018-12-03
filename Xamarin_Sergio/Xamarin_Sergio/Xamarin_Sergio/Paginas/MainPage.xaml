@@ -6,11 +6,12 @@
              Title="Concesionario"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
 
-    <ListView
+    <!--<ListView
     HasUnevenRows="True">
     </ListView>
     <ContentPage.ToolbarItems>
         <ToolbarItem Command="{Binding GoToCommand}" CommandParameter="NewOrderPage">
         </ToolbarItem>
-    </ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems>-->
+    
 </ContentPage>

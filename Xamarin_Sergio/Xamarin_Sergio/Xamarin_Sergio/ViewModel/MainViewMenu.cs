@@ -2,17 +2,21 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
+using System.Windows.Input;
+using Xamarin_Sergio.Servicios;
 
 namespace Xamarin_Sergio.ViewModel
 {
     public class MainViewMenu
     {
         public ObservableCollection<MenuItemViewModel> Menu { get; set; }
+        //ServicioNavegacion servicioNavegacion;
 
         public MainViewMenu()
         {
             LoadMenu();
         }
+
         private void LoadMenu()
         {
             Menu = new ObservableCollection<MenuItemViewModel>();

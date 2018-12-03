@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin_Sergio.iOS", "Xamar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin_Sergio.UWP", "Xamarin_Sergio\Xamarin_Sergio.UWP\Xamarin_Sergio.UWP.csproj", "{264AEE42-FB1D-4E0D-8071-16D2632FF9BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin_Sergio", "Xamarin_Sergio\Xamarin_Sergio\Xamarin_Sergio.csproj", "{85F9E24C-C003-42F8-A2ED-DAD35115E919}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin_Sergio", "Xamarin_Sergio\Xamarin_Sergio\Xamarin_Sergio.csproj", "{85F9E24C-C003-42F8-A2ED-DAD35115E919}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -148,7 +148,6 @@ Global
 		{57C98C09-6A05-4E22-B835-659DBF5ADBCF}.AppStore|x86.Build.0 = AppStore|iPhone
 		{57C98C09-6A05-4E22-B835-659DBF5ADBCF}.AppStore|x86.Deploy.0 = AppStore|iPhone
 		{57C98C09-6A05-4E22-B835-659DBF5ADBCF}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
-		{57C98C09-6A05-4E22-B835-659DBF5ADBCF}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
 		{57C98C09-6A05-4E22-B835-659DBF5ADBCF}.Debug|Any CPU.Deploy.0 = Debug|iPhoneSimulator
 		{57C98C09-6A05-4E22-B835-659DBF5ADBCF}.Debug|ARM.ActiveCfg = Debug|iPhone
 		{57C98C09-6A05-4E22-B835-659DBF5ADBCF}.Debug|ARM.Build.0 = Debug|iPhone
@@ -292,7 +291,6 @@ Global
 		{85F9E24C-C003-42F8-A2ED-DAD35115E919}.AppStore|x86.Build.0 = Debug|Any CPU
 		{85F9E24C-C003-42F8-A2ED-DAD35115E919}.AppStore|x86.Deploy.0 = Debug|Any CPU
 		{85F9E24C-C003-42F8-A2ED-DAD35115E919}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{85F9E24C-C003-42F8-A2ED-DAD35115E919}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85F9E24C-C003-42F8-A2ED-DAD35115E919}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{85F9E24C-C003-42F8-A2ED-DAD35115E919}.Debug|ARM.ActiveCfg = Debug|Any CPU
 		{85F9E24C-C003-42F8-A2ED-DAD35115E919}.Debug|ARM.Build.0 = Debug|Any CPU

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Xamarin_Sergio
+namespace Xamarin_Sergio.Paginas
 {
 	public partial class Añadir_Coches : ContentPage
 	{

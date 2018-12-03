@@ -5,11 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace Xamarin_Sergio.Paginas
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Pagina_Menu : ContentPage
 	{
 		public Pagina_Menu ()
