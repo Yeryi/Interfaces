@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xamarin_Sergio.Paginas.Añadir_Concesionario"
+             Title="Añadir Concesionario">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80px"/>
+                <RowDefinition Height="80px"/>
+                <RowDefinition Height="80px"/>
+                <RowDefinition Height="80px"/>
+                <RowDefinition Height="80px"/>
+                <RowDefinition Height="80px"/>
+                <RowDefinition Height="80px"/>
+                <RowDefinition Height="80px"/>
+            </Grid.RowDefinitions>
+
+            <Label Text="Insertar Concesionario" Grid.Column="0" Grid.ColumnSpan="3" FontSize="24" VerticalOptions="Center" Height="81"/>
+            <Entry x:Name="id" Grid.Row="1" Placeholder="Referencia(ID)"/>
+            <Entry x:Name="nombre" Grid.Column="0" Grid.Row="2" Placeholder="Nombre" MaxLength="32"/>
+            <Entry x:Name="provincia" Grid.Column="0" Grid.Row="3" Placeholder="Provincia" MaxLength="32" Width="400"/>
+            <Picker Title="País:" Grid.Column="0" Grid.Row="4">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>España</x:String>
+                        <x:String>Inglaterra</x:String>
+                        <x:String>Alemania</x:String>
+                        <x:String>Francia</x:String>
+                        <x:String>Andorra</x:String>
+                        <x:String>Portugal</x:String>
+                        <x:String>Francia</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Entry x:Name="trabajadores" Grid.Column="0" Grid.Row="5" Placeholder="Número De Trabajadores" MaxLength="20"/>
+            <Entry x:Name="telefono" Grid.Column="0" Grid.Row="6" Placeholder="Teléfono" MaxLength="11"/>
+            <StackLayout Grid.Column="2" Grid.Row="7">
+                <Button Text="Insertar"/>
+                <Button Text="Borrar Datos"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -10,11 +10,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MvvmLightLibs" Version="5.4.1.1" />
     <PackageReference Include="Xamarin.Forms" Version="3.1.0.697729" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Update="Paginas\Añadir_Coches.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Paginas\Añadir_Concesionario.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Paginas\PaginaMaestra.xaml">

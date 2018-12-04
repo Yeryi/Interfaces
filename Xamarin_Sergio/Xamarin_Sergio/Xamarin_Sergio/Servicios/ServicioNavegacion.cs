@@ -17,6 +17,9 @@ namespace Xamarin_Sergio.Servicios
                 case "Añadir_Coches":
                     await Navigate(new Añadir_Coches());
                     break;
+                case "Añadir_Concesionario":
+                    await Navigate(new Añadir_Concesionario());
+                    break;
                 case "MainPage":
                     await App.Navigator.PopToRootAsync();
                     break;

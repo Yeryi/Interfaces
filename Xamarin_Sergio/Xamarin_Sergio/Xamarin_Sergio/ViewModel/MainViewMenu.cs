@@ -39,7 +39,7 @@ namespace Xamarin_Sergio.ViewModel
             {
                 Icon = "",
                 Title = "Añadir Concesionario",
-                PageName = "MainPage"
+                PageName = "Añadir_Concesionario"
             });
 
             Menu.Add(new MenuItemViewModel()

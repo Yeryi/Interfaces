@@ -2,21 +2,22 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=netstandard"
-             x:Class="Xamarin_Sergio.Paginas.Añadir_Coches">
+             x:Class="Xamarin_Sergio.Paginas.Añadir_Coches"
+             Title="Añadir Vehículo">
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Insertar Vehículo" FontSize="24" VerticalOptions="Center"/>
-            <Entry x:Name="marca" Text="Marca"/>
-            <Entry x:Name="modelo" Text="Modelo" MaxLength="32"/>
-            <Entry x:Name="color" Text="Color" MaxLength="32"/>
-            <Picker x:Name="tipocombustible" HorizontalOptions="FillAndExpand">
+            <Entry x:Name="marca" Placeholder="Marca"/>
+            <Entry x:Name="modelo" Placeholder="Modelo" MaxLength="32"/>
+            <Entry x:Name="color" Placeholder="Color" MaxLength="32"/>
+            <Picker Title="Combustible:">
                 <Picker.Items>
                     <x:String>Diesel</x:String>
                     <x:String>Gasolina</x:String>
                     <x:String>Eléctrico</x:String>
                 </Picker.Items>
             </Picker>
-            <Entry x:Name="matricula" Text="Matricula"/>
+            <Entry x:Name="matricula" Placeholder="Matricula"/>
             <DatePicker VerticalOptions="CenterAndExpand" Date="{x:Static sys:DateTime.Now}">
                 <DatePicker.Format>dd-MM-yyyy</DatePicker.Format>
             </DatePicker>
@@ -26,6 +27,9 @@
                         <x:String>España</x:String>
                         <x:String>Inglaterra</x:String>
                         <x:String>Alemania</x:String>
+                        <x:String>Francia</x:String>
+                        <x:String>Andorra</x:String>
+                        <x:String>Portugal</x:String>
                         <x:String>Francia</x:String>
                     </x:Array>
                 </Picker.ItemsSource>
