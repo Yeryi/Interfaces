@@ -10,8 +10,8 @@
     <MasterDetailPage.Detail>
         <NavigationPage x:Name="Navigator">
             <x:Arguments>
-                <pages:Añadir_Coches>
-                </pages:Añadir_Coches>
+                <pages:MainPage>
+                </pages:MainPage>
             </x:Arguments>
         </NavigationPage>
     </MasterDetailPage.Detail>

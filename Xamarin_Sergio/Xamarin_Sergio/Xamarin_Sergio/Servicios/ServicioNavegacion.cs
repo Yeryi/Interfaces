@@ -29,7 +29,6 @@ namespace Xamarin_Sergio.Servicios
         private static async Task Navigate<T>(T page) where T : Page
         {
             NavigationPage.SetHasBackButton(page, false);
-            NavigationPage.SetBackButtonTitle(page, "Atrás");
 
             await App.Navigator.PushAsync(page);
         }

@@ -14,7 +14,7 @@ namespace Xamarin_Sergio
         {
             InitializeComponent();
 
-            MainPage = new PaginaMaestra();
+            MainPage = new PaginaBienvenida();
         }
 
         protected override void OnStart()

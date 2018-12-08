@@ -4,8 +4,7 @@
              x:Class="Xamarin_Sergio.Paginas.Pagina_Menu"
              Title="Menu"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
-    <ContentPage.Content>
-        <ListView 
+    <ListView 
             ItemsSource="{Binding Menu}"
             HasUnevenRows="True">
             <ListView.ItemTemplate>
@@ -32,5 +31,4 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-    </ContentPage.Content>
-</ContentPage>
+    </ContentPage>
