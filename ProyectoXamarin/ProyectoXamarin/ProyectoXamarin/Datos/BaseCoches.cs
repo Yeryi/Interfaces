@@ -9,7 +9,7 @@ namespace ProyectoXamarin.Datos
 {
     public class BaseCoches
     {
-        readonly SQLiteAsyncConnection database;
+        /*readonly SQLiteAsyncConnection database;
 
         public BaseCoches(string dbPath)
         {
@@ -47,6 +47,6 @@ namespace ProyectoXamarin.Datos
         public Task<int> DeleteItemAsync(coches item)
         {
             return database.DeleteAsync(item);
-        }
+        }*/
     }
 }

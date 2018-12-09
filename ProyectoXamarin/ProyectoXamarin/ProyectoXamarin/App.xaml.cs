@@ -1,8 +1,4 @@
-﻿using ProyectoXamarin.Datos;
-using ProyectoXamarin.Paginas;
-using ProyectoXamarin.ViewModel;
-using System;
-using System.IO;
+﻿using ProyectoXamarin.Paginas;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,7 +9,7 @@ namespace ProyectoXamarin
     {
         public static NavigationPage Navigator { get; internal set; }
         public static MasterDetailPage Master { get; internal set; }
-        static BaseCoches databaseC;
+        //static BaseCoches databaseC;
 
         public App()
         {
@@ -22,7 +18,7 @@ namespace ProyectoXamarin
             MainPage = new MasterDetail();
         }
 
-        public static BaseCoches Database
+        /*public static BaseCoches Database
         {
             get
             {
@@ -32,7 +28,7 @@ namespace ProyectoXamarin
                 }
                 return databaseC;
             }
-        }
+        }*/
 
         protected override void OnStart()
         {
