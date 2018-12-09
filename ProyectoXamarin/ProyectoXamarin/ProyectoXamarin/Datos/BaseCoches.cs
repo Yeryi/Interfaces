@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using ProyectoXamarin.ViewModel;
+using ProyectoXamarin.Models;
 using SQLite;
 
 namespace ProyectoXamarin.Datos

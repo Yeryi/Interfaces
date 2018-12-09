@@ -1,6 +1,6 @@
 ﻿using SQLite;
 
-namespace ProyectoXamarin.ViewModel
+namespace ProyectoXamarin.Models
 {
     public class concesionarios
     {
