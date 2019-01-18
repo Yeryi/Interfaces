@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight.Command;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
@@ -10,11 +11,32 @@ namespace Xamarin_Sergio.ViewModel
     public class MainViewMenu
     {
         public ObservableCollection<MenuItemViewModel> Menu { get; set; }
-        //ServicioNavegacion servicioNavegacion;
+        ServicioNavegacion servicioNavegacion;
 
         public MainViewMenu()
         {
+            servicioNavegacion = new ServicioNavegacion();
             LoadMenu();
+        }
+
+        public ICommand GoToCommand
+        {
+            get { return new RelayCommand<string>(GoTo); }
+        }
+
+        private void GoTo(string pageName)
+        {
+            servicioNavegacion.Navigate(pageName);
+        }
+
+        public ICommand StartCommand
+        {
+            get { return new RelayCommand(Start); }
+        }
+
+        private async void Start()
+        {
+            servicioNavegacion.SetMainPage("PaginaMaestra");
         }
 
         private void LoadMenu()

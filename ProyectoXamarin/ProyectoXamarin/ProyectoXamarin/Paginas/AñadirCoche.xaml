@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoXamarin.Paginas.AñadirCoche"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
+             Title="Añadir Coche">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry x:Name="marca" Placeholder="Marca"/>
+            <Entry x:Name="modelo" Placeholder="Modelo" MaxLength="32"/>
+            <Entry x:Name="color" Placeholder="Color" MaxLength="32"/>
+            <Picker Title="Combustible">
+                <Picker.Items>
+                    <x:String>Diesel</x:String>
+                    <x:String>Gasolina</x:String>
+                    <x:String>Eléctrico</x:String>
+                </Picker.Items>
+            </Picker>
+            <Entry x:Name="matricula" Placeholder="Matricula"/>
+            <DatePicker VerticalOptions="CenterAndExpand" Date="{x:Static sys:DateTime.Now}">
+                <DatePicker.Format>dd-MM-yyyy</DatePicker.Format>
+            </DatePicker>
+            <Picker Title="País de matriculación">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>España</x:String>
+                        <x:String>Inglaterra</x:String>
+                        <x:String>Alemania</x:String>
+                        <x:String>Francia</x:String>
+                        <x:String>Andorra</x:String>
+                        <x:String>Portugal</x:String>
+                        <x:String>Francia</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Button Text="Insertar" Margin="0,0,20,0"/>
+            <Button Text="Borrar Datos" Margin="0,0,20,0"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
