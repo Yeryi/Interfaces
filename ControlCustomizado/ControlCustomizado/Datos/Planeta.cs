@@ -23,12 +23,11 @@ namespace ControlCustomizado.Datos
             var Planetas = new ObservableCollection<Planeta>();
 
             Planetas.Add(new Planeta { Nombre = "Tierra", Diametro = 15, DistanciaSol = 200, Imagen = "ms-appx:///Assets/StoreLogo.png" });
-            Planetas.Add(new Planeta { Nombre = "Marte", Diametro = 20, DistanciaSol = 300, Imagen = "ms-appx:///Assets/pimiento.jpg" });
-            Planetas.Add(new Planeta { Nombre = "Venus", Diametro = 25, DistanciaSol = 400, Imagen = "ms-appx:///Assets/pimiento.jpg" });
-            Planetas.Add(new Planeta { Nombre = "Luna", Diametro = 5, DistanciaSol = 220, Imagen = "ms-appx:///Assets/pimiento.jpg" });
+            Planetas.Add(new Planeta { Nombre = "Marte", Diametro = 20, DistanciaSol = 300, Imagen = "ms-appx:///Assets/StoreLogo.png" });
+            Planetas.Add(new Planeta { Nombre = "Venus", Diametro = 25, DistanciaSol = 400, Imagen = "ms-appx:///Assets/StoreLogo.png" });
+            Planetas.Add(new Planeta { Nombre = "Luna", Diametro = 5, DistanciaSol = 220, Imagen = "ms-appx:///Assets/StoreLogo.png" });
 
             return Planetas;
         }
     }
-
 }

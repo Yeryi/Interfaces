@@ -1,5 +1,7 @@
-﻿using System;
+﻿using ControlCustomizado.Datos;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -22,9 +24,11 @@ namespace ControlCustomizado
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        ObservableCollection<Planeta> listadoPlanetas;
         public MainPage()
         {
             this.InitializeComponent();
+            listadoPlanetas = GestorPlanetas.ObtenerPlanetas();
         }
     }
 }

@@ -9,6 +9,6 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <local:ControlPlanetario Margin="326,251,326,251"/>
+        <local:ControlPlanetario ItemsSource="{x:Bind listadoPlanetas}"  Margin="326,251,326,251"/>
     </Grid>
 </Page>

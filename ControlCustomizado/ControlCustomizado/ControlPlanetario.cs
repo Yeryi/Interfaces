@@ -1,9 +1,12 @@
-﻿using System;
+﻿using ControlCustomizado.Datos;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.UI;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Shapes;
@@ -16,6 +19,18 @@ namespace ControlCustomizado
         {
             this.DefaultStyleKey = typeof(ControlPlanetario);
         }
+
+        public ObservableCollection<Planeta> ItemsSource
+        {
+            get { return (ObservableCollection<Planeta>)GetValue(ItemsSourceProperty); }
+            set { SetValue(ItemsSourceProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for ItemsSource.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty ItemsSourceProperty =
+            DependencyProperty.Register("ItemsSource", typeof(ObservableCollection<Planeta>), typeof(ControlPlanetario), new PropertyMetadata(null));
+
+
 
         protected override void OnApplyTemplate()
         {
@@ -33,7 +48,6 @@ namespace ControlCustomizado
             CanvasDibujo.Children.Add(planeta);
             Canvas.SetLeft(planeta, 250);
             Canvas.SetTop(planeta, 250);
-
         }
     }
 }
