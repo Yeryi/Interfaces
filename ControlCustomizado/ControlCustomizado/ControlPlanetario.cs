@@ -37,17 +37,37 @@ namespace ControlCustomizado
             base.OnApplyTemplate();
 
             Canvas CanvasDibujo = (Canvas)GetTemplateChild("CanvasPlanetario");
+            Canvas.SetTop(CanvasDibujo, 500);
+            Canvas.SetLeft(CanvasDibujo, 500);
+
+            CanvasDibujo.Height = 500;
             CanvasDibujo.Children.Clear();
 
-            Ellipse planeta = new Ellipse();
+            Ellipse planeta1 = new Ellipse();
+            Ellipse planeta2 = new Ellipse();
+            Ellipse planeta3 = new Ellipse();
 
-            planeta.Height = 20;
-            planeta.Width = 20;
-            planeta.Fill = new SolidColorBrush(Colors.Red);
+            planeta1.Height = 20;
+            planeta1.Width = 20;
+            planeta2.Height = 20;
+            planeta2.Width = 20;
+            planeta3.Height = 20;
+            planeta3.Width = 20;
 
-            CanvasDibujo.Children.Add(planeta);
-            Canvas.SetLeft(planeta, 250);
-            Canvas.SetTop(planeta, 250);
+            planeta1.Fill = new SolidColorBrush(Colors.Red);
+            planeta2.Fill = new SolidColorBrush(Colors.Red);
+            planeta3.Fill = new SolidColorBrush(Colors.Red);
+
+            CanvasDibujo.Children.Add(planeta1);
+            CanvasDibujo.Children.Add(planeta2);
+            CanvasDibujo.Children.Add(planeta3);
+
+            //Canvas.SetLeft(planeta, 250);
+            Canvas.SetTop(planeta1, Canvas.GetTop(CanvasDibujo) / 2);
+            Canvas.SetTop(planeta2, Canvas.GetTop(CanvasDibujo) / 2);
+            Canvas.SetLeft(planeta2, 75);
+            Canvas.SetTop(planeta3, Canvas.GetTop(CanvasDibujo) / 2);
+            Canvas.SetLeft(planeta3, 150);
         }
     }
 }

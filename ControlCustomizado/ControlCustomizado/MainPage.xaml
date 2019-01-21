@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <local:ControlPlanetario ItemsSource="{x:Bind listadoPlanetas}"  Margin="326,251,326,251"/>
+    <Grid Margin="349,178,349,178" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <local:ControlPlanetario ItemsSource="{x:Bind listadoPlanetas}"  Margin="0,0,0,0" HorizontalAlignment="Center" Width="802" Height="644" VerticalAlignment="Top"/>
     </Grid>
 </Page>
