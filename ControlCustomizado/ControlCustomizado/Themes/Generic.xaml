@@ -7,12 +7,11 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="local:ControlPlanetario">
-
                     <Grid>
                         <Canvas x:Name="CanvasPlanetario"></Canvas>
-                        <Ellipse Width="100" Height="100" Fill="Yellow" 
+                        <Ellipse x:Name="Sol" Width="100" Height="100" Fill="Yellow" 
                              HorizontalAlignment="Center"
-                             VerticalAlignment="Center"></Ellipse>
+                             VerticalAlignment="Center"/>
                     </Grid>
                 </ControlTemplate>
 
