@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -23,6 +24,7 @@ namespace ComponentePersonal
         public Velocimetro()
         {
             this.InitializeComponent();
+            
         }
 
         /*public static readonly DependencyProperty ValueProperty =
@@ -36,9 +38,21 @@ namespace ComponentePersonal
 
         private void AumentarVelocidad(object sender, RoutedEventArgs e)
         {
-            if (RadialGaugeControl.IsInteractive == true && RadialGaugeControl.Value < RadialGaugeControl.Maximum)
+            if (RadialGaugeControl.IsInteractive == true)
             {
-                RadialGaugeControl.Value = RadialGaugeControl.Value+1;
+                RadialGaugeControl.Value++;
+            }
+        }
+
+        private void RepeatButton_LosingFocus(UIElement sender, LosingFocusEventArgs args)
+        {
+            while (RadialGaugeControl.Value > 0)
+            {
+                
+                if (RadialGaugeControl.IsInteractive == true)
+                {
+                    RadialGaugeControl.Value--;
+                }
             }
         }
     }
