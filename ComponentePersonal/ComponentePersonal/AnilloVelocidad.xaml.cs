@@ -19,9 +19,15 @@ namespace ComponentePersonal
 {
     public sealed partial class AnilloVelocidad : UserControl
     {
+        public int valor = 0;
         public AnilloVelocidad()
         {
             this.InitializeComponent();
+        }
+
+        private void AumentarVelocidad(object sender, RoutedEventArgs e)
+        {
+            valor++;
         }
     }
 }

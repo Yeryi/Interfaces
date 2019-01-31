@@ -9,14 +9,26 @@
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="400">
+    <RelativePanel>
+        <controls:RingSegment x:Name="MiAnillo" HorizontalAlignment="Center" VerticalAlignment="Center" Radius="150" EndAngle="90" StartAngle="-90" InnerRadius="100">
+            <controls:RingSegment.Fill>
+                <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
+                    <GradientStop Color="#FF0C9430"/>
+                    <GradientStop Color="#FF316F0A" Offset="0.642"/>
+                    <GradientStop Color="#FFFF0052" Offset="1"/>
+                </LinearGradientBrush>
+            </controls:RingSegment.Fill>
+        </controls:RingSegment>
 
-    <controls:RingSegment x:Name="MiAnillo" HorizontalAlignment="Center" VerticalAlignment="Center" Radius="150" EndAngle="90" StartAngle="-90" InnerRadius="100">
-        <controls:RingSegment.Fill>
-            <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
-                <GradientStop Color="#FF0C9430"/>
-                <GradientStop Color="#FF316F0A" Offset="0.642"/>
-                <GradientStop Color="#FFFF0052" Offset="1"/>
-            </LinearGradientBrush>
-        </controls:RingSegment.Fill>
-    </controls:RingSegment>
+        <Path Width="20" Height="150" Data="F1 M 126.578,300L 111,261.5L 127.422,3.05176e-005L 144,261.5L 126.578,300 Z " Fill="White" RelativePanel.AlignHorizontalCenterWith="MiAnillo" RelativePanel.AlignTopWith="MiAnillo"
+              RenderTransformOrigin="0.5,1" Stretch="Fill" Stroke="#FF000000" StrokeLineJoin="Round">
+            <Path.RenderTransform>
+                <CompositeTransform Rotation="{Binding Content, ElementName=Acelerador}"/>
+            </Path.RenderTransform>
+        </Path>
+        <Ellipse Height="25" Width="25" Fill="Gray" RelativePanel.AlignHorizontalCenterWith="MiAnillo" RelativePanel.AlignVerticalCenterWith="MiAnillo"/>
+        <RepeatButton x:Name="Acelerador" Click="AumentarVelocidad" Height="50" Width="50" HorizontalAlignment="Left" Background="White" Margin="339,99,0,0" VerticalAlignment="Top">
+            <Image Source="Assets/acelerador.png" Stretch="UniformToFill"/>
+        </RepeatButton>
+    </RelativePanel>
 </UserControl>

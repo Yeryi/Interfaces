@@ -29,8 +29,7 @@ namespace ComponentePersonal
 
         private void AumentarVelocidad(object sender, RoutedEventArgs e)
         {
-            int valorMax = Int32.Parse(VelocidadMax.Text);
-            if (RadialGaugeControl.IsInteractive == true && RadialGaugeControl.Value<valorMax)
+            if (RadialGaugeControl.IsInteractive == true)
             {
                 RadialGaugeControl.Value++;
             }
