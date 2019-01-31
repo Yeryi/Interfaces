@@ -27,28 +27,20 @@ namespace ComponentePersonal
             
         }
 
-        /*public static readonly DependencyProperty ValueProperty =
-           DependencyProperty.Register(nameof(Value), typeof(double), typeof(RadialGauge), new PropertyMetadata(null));
-
-        public double Value
-        {
-            get { return (double)GetValue(ValueProperty); }
-            set { SetValue(ValueProperty, value); }
-        }*/
-
         private void AumentarVelocidad(object sender, RoutedEventArgs e)
         {
-            if (RadialGaugeControl.IsInteractive == true)
+            int valorMax = Int32.Parse(VelocidadMax.Text);
+            if (RadialGaugeControl.IsInteractive == true && RadialGaugeControl.Value<valorMax)
             {
                 RadialGaugeControl.Value++;
             }
         }
 
-        private void RepeatButton_LosingFocus(UIElement sender, LosingFocusEventArgs args)
+        private async void RepeatButton_LostFocus(object sender, RoutedEventArgs e)
         {
-            while (RadialGaugeControl.Value > 0)
+            while (RadialGaugeControl.Value >= 1)
             {
-                
+                await Task.Delay(10);
                 if (RadialGaugeControl.IsInteractive == true)
                 {
                     RadialGaugeControl.Value--;
