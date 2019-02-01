@@ -23,12 +23,14 @@
         <Path Width="20" Height="150" Data="F1 M 126.578,300L 111,261.5L 127.422,3.05176e-005L 144,261.5L 126.578,300 Z " Fill="White" RelativePanel.AlignHorizontalCenterWith="MiAnillo" RelativePanel.AlignTopWith="MiAnillo"
               RenderTransformOrigin="0.5,1" Stretch="Fill" Stroke="#FF000000" StrokeLineJoin="Round">
             <Path.RenderTransform>
-                <CompositeTransform Rotation="{Binding Content, ElementName=Acelerador}"/>
+                <CompositeTransform Rotation="{x:Bind valor , Mode=TwoWay}"/>
             </Path.RenderTransform>
         </Path>
+
         <Ellipse Height="25" Width="25" Fill="Gray" RelativePanel.AlignHorizontalCenterWith="MiAnillo" RelativePanel.AlignVerticalCenterWith="MiAnillo"/>
-        <RepeatButton x:Name="Acelerador" Click="AumentarVelocidad" Height="50" Width="50" HorizontalAlignment="Left" Background="White" Margin="339,99,0,0" VerticalAlignment="Top">
+        <RepeatButton x:Name="Acelerador" Click="AumentarVelocidad" Height="50" Width="50" HorizontalAlignment="Left" Background="White" Margin="339,99,0,0" VerticalAlignment="Top" LostFocus="RepeatButton_LostFocus">
             <Image Source="Assets/acelerador.png" Stretch="UniformToFill"/>
         </RepeatButton>
+        <TextBlock x:Name="Velocidad" RelativePanel.AlignTopWith="Acelerador" TextAlignment="Center" Margin="0,40,18,0" Text="0" RelativePanel.AlignRightWithPanel="True" HorizontalAlignment="Right" VerticalAlignment="Center" Width="40" Height="20" RenderTransformOrigin="0.85,0.477" FontWeight="Bold" FontFamily="Arial" FontSize="18"/>
     </RelativePanel>
 </UserControl>
