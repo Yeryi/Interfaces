@@ -9,7 +9,8 @@
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="400">
-    <RelativePanel>
+
+    <RelativePanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <controls:RingSegment x:Name="MiAnillo" HorizontalAlignment="Center" VerticalAlignment="Center" Radius="150" EndAngle="90" StartAngle="-90" InnerRadius="100">
             <controls:RingSegment.Fill>
                 <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
@@ -26,11 +27,20 @@
                 <CompositeTransform Rotation="{x:Bind valor , Mode=TwoWay}"/>
             </Path.RenderTransform>
         </Path>
+        <TextBlock Text="--0--" RelativePanel.AlignVerticalCenterWith="MiAnillo" Margin="9,0,0,18"/>
+        <TextBlock Text="--25--" RelativePanel.AlignVerticalCenterWith="MiAnillo" Margin="16,0,0,110"/>
+        <TextBlock Text="--50--" RelativePanel.AlignVerticalCenterWith="MiAnillo" Margin="49,0,0,200"/>
+        <TextBlock Text="--90--" RelativePanel.AlignHorizontalCenterWith="MiAnillo" Margin="0,15,0,0"/>
+        <TextBlock Text="--130--" RelativePanel.AlignVerticalCenterWith="MiAnillo" Margin="205,0,0,197"/>
+        <TextBlock Text="--155--" RelativePanel.AlignVerticalCenterWith="MiAnillo" Margin="240,0,0,105"/>
+        <TextBlock Text="--180--" RelativePanel.AlignRightWith="MiAnillo" RelativePanel.AlignVerticalCenterWith="MiAnillo" Margin="0,0,0,15"/>
+
+
 
         <Ellipse Height="25" Width="25" Fill="Gray" RelativePanel.AlignHorizontalCenterWith="MiAnillo" RelativePanel.AlignVerticalCenterWith="MiAnillo"/>
         <RepeatButton x:Name="Acelerador" Click="AumentarVelocidad" Height="50" Width="50" HorizontalAlignment="Left" Background="White" Margin="339,99,0,0" VerticalAlignment="Top" LostFocus="RepeatButton_LostFocus">
             <Image Source="Assets/acelerador.png" Stretch="UniformToFill"/>
         </RepeatButton>
-        <TextBlock x:Name="Velocidad" RelativePanel.AlignTopWith="Acelerador" TextAlignment="Center" Margin="0,40,18,0" Text="0" RelativePanel.AlignRightWithPanel="True" HorizontalAlignment="Right" VerticalAlignment="Center" Width="40" Height="20" RenderTransformOrigin="0.85,0.477" FontWeight="Bold" FontFamily="Arial" FontSize="18"/>
+        <TextBlock x:Name="Velocidad" RelativePanel.AlignHorizontalCenterWith="MiAnillo" Margin="0,170,0,0" TextAlignment="Center" Text="0" Width="40" Height="20" FontWeight="Bold" FontFamily="Arial" FontSize="20"/>
     </RelativePanel>
 </UserControl>

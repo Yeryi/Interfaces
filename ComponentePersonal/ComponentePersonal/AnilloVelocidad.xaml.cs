@@ -31,7 +31,7 @@ namespace ComponentePersonal
         {
             if (valor < 90)
             {
-                Velocidad.Text = (valor + 90).ToString();
+                Velocidad.Text = (valor + 91).ToString();
                 valor++;
             }
             
@@ -39,9 +39,9 @@ namespace ComponentePersonal
 
         private async void RepeatButton_LostFocus(object sender, RoutedEventArgs e)
         {
-            while (valor >= -90)
+            while (valor > -90)
             {
-                Velocidad.Text = (valor + 90).ToString();
+                Velocidad.Text = (valor + 89).ToString();
                 await Task.Delay(50);
                 valor--;
             }
