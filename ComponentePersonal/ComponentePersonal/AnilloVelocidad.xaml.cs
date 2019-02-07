@@ -26,8 +26,12 @@ namespace ComponentePersonal
             this.InitializeComponent();
             valor = -90;
         }
-
-        private void AumentarVelocidad(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// Este método se encarga de aumentar el ángulo de 1 en 1 cuando el botón se pulse una vez o se mantenga pulsado.
+        /// </summary>
+        /// <param name="sender">Contiene la instancia del control que lanza el evento, en este caso button.</param>
+        /// <param name="e">Este parametro cambia dependiendo la firma del hander del evento</param>
+        public void AumentarVelocidad(object sender, RoutedEventArgs e)
         {
             if (valor < 90)
             {
@@ -36,8 +40,12 @@ namespace ComponentePersonal
             }
             
         }
-
-        private async void RepeatButton_LostFocus(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// Cuando el botón deja de estar pulsado, la velocidad (ángulo) disminuirá.
+        /// </summary>
+        /// <param name="sender">Contiene la instancia del control que lanza el evento, en este caso button.</param>
+        /// <param name="e">Este parametro cambia dependiendo la firma del hander del evento</param>
+        public async void RepeatButton_LostFocus(object sender, RoutedEventArgs e)
         {
             while (valor > -90)
             {
@@ -47,7 +55,10 @@ namespace ComponentePersonal
             }
         }
 
-
+        /// <summary>
+        /// La variable valor es el ángulo que va a ir tomando el velocímetro. 
+        /// Necesitamos hacer un DependencyProperty para que la variable se vaya actualizando cuando se cambie su valor.
+        /// </summary>
         public int valor
         {
             get { return (int)GetValue(valorProperty); }
